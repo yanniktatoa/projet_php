@@ -1,0 +1,99 @@
+{% extends 'form.html.twig' %}
+
+{% block title %}Hello FormulaireController!{% endblock %}
+
+{% block body %}
+<div class="main">
+    <div class="container">
+        <div class="signup-content">
+            <div class="signup-img">
+                <img src="assets/Formulaire/images/ff.jpg" alt="">
+            </div>
+            <div class="signup-form">
+                {{ form_start(form,{'attr':{'class':'register-form','id':'register-form'}}) }}
+                    <h2>Formulaire d'Inscription</h2>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">Nom :</label>
+                            {{ form_widget(form.Nom,{'attr':{'type':'text','name':'name','id':'name','required':'true'}}) }}
+                        </div>
+                        <div class="form-group">
+                            <label for="prenom">Prénoms :</label>
+                            {{ form_widget(form.Prenoms,{'attr':{'type':'text','name':'prenom','id':'prenom','required':'true'}}) }}
+                        </div>
+                    </div>
+                    <div class="form-group row fv-plugins-icon-container">
+                        <label class="col-xl-3 col-lg-3 col-form-label">
+                            Sexe
+                        </label>
+                        <div class="col-xl-9 col-lg-9">
+                          {{ form_widget(form.Sexe,{'attr':{'class':'form-control form-control-solid form-control-lg is-invalid'}}) }}
+                          <div class="fv-plugins-message-container"></div>
+                        </div>
+                      </div>
+                    <div class="form-group">
+                        <label for="datenaiss">Date de naissance :</label>
+                        {{ form_widget(form.DateNaissance,{'attr':{'type':'date','name':'datenaiss','id':'datenaiss','required':'true'}}) }}
+                    </div>
+                    <div class="form-group">
+                        <label for="lieunaiss">Lieu de naissance :</label>
+                        {{ form_widget(form.LieuNaissance,{'attr':{'type':'text','name':'lieunaiss','id':'lieunaiss','required':'true'}}) }}
+                    </div>
+                    <div class="form-group">
+                        <label for="nationalite">Nationalite :</label>
+                        {{ form_widget(form.Nationalite,{'attr':{'type':'radio','name':'nationalite','id':'nationalite','required':'true'}}) }}
+                    </div>
+                    <div class="form-group">
+                        <label for="paysorigine">Pays d'origine :</label>
+                        {{ form_widget(form.PaysOrigine,{'attr':{'type':'text','name':'paysorigine','id':'paysorigine','required':'true'}}) }}
+                    </div>
+                    <div class="form-group">
+                        <label for="numcni">Numero de CNI :</label>
+                        {{ form_widget(form.NumeroCni,{'attr':{'type':'number','name':'numcni','id':'numcni'}}) }}
+                    </div>
+                    <div class="form-group">
+                        <label for="numpass">Numero de Passeport :</label>
+                        {{ form_widget(form.NumeroPassport,{'attr':{'type':'number','name':'numpass','id':'numpass'}}) }}
+                    </div>
+                    <div class="form-group">
+                        <label for="annebac">Année d'obtention du Bac :</label>
+                        {{ form_widget(form.AnneBac,{'attr':{'type':'number','name':'annebac','id':'annebac','required':'true'}}) }}
+                    </div>
+                    <div class="form-group">
+                        <label for="seriebac">Série de Bac :</label>
+                        {{ form_widget(form.SerieBac,{'attr':{'type':'text','name':'seriebac','id':'seriebac','required':'true'}}) }}
+                    </div>
+                    <div class="form-group">
+                        <label for="numtable">Numero de Table :</label>
+                        {{ form_widget(form.NumeroTable,{'attr':{'type':'number','name':'numtable','id':'numtable','required':'true'}}) }}
+                    </div>
+                    <div class="form-group">
+                        <label for="numtel">Numero de Telephone :</label>
+                        {{ form_widget(form.NumeroTelephone,{'attr':{'type':'number','name':'numtel','id':'numtel','required':'true'}}) }}
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email :</label>
+                        {{ form_widget(form.Email,{'attr':{'type':'email','name':'email','id':'email','required':'true'}}) }}
+                    </div>
+                    <div class="form-group">
+                        <label for="adresse">Adresse :</label>
+                        {{ form_widget(form.Adresse,{'attr':{'type':'text','name':'adresse','id':'adresse','required':'true'}}) }}
+                    </div>
+                    <div class="form-submit">
+                        <div>
+                          <button class="submit"  name="submit" id="submit">
+                            Soumettre
+                          </button>
+                        </div>
+                      </div>
+                   <div class="form-submit">
+                        <div>
+                            <a class="submit" href="/ajout" style="font-family: 'Poppins';"  name="submit" id="submit">Ajouter de tuteur(s)</a>
+                        </div>
+                      </div>
+                {{ form_end(form) }}
+            </div>
+        </div>
+     </div>
+</div>
+{% endblock %}
